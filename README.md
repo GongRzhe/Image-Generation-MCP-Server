@@ -51,8 +51,6 @@ Generates images using the Flux model based on text prompts.
 
 ![image](https://github.com/user-attachments/assets/766921ce-ca8e-4d68-866d-8c7b55b2e09d)
 
-![image](https://github.com/user-attachments/assets/612370d0-9c81-4853-b818-099724bfac75)
-
 ![out-0 (1)](https://github.com/user-attachments/assets/83549b2e-525a-4ff9-825c-83ba74459575)
 
 #### Parameters
