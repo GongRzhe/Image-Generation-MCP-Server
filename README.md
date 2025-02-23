@@ -1,17 +1,19 @@
 # Image Generation MCP Server
+![](https://badge.mcpx.dev?type=server 'MCP Server')
 
 This MCP server provides image generation capabilities using the Replicate Flux model.
 
 ## Setup
 
-1. Add the server configuration to your MCP settings file (located at `c:\Users\Administrator\AppData\Roaming\Cursor\User\globalStorage\saoudrizwan.claude-dev\settings\cline_mcp_settings.json`):
+1. On MacOS: ~/Library/Application Support/Claude/claude_desktop_config.json
+   On Windows: %APPDATA%/Claude/claude_desktop_config.json
 
 ```json
 {
   "mcpServers": {
     "image-gen": {
       "command": "node",
-      "args": ["C:/Users/Administrator/Documents/Cline/MCP/image-gen-server/build/index.js"],
+      "args": ["/path/to/image-gen-server/build/index.js"],
       "env": {
         "REPLICATE_API_TOKEN": "your-replicate-api-token",
         "MODEL": "alternative-model-name"
@@ -29,6 +31,8 @@ This MCP server provides image generation capabilities using the Replicate Flux 
    - Create a new API token
    - Copy the token and replace `your-replicate-api-token` in the MCP settings
 
+![image](https://github.com/user-attachments/assets/583afa78-1a08-4eb5-9a37-decb95bd50c4)
+
 ### Environment Variables
 
 - `REPLICATE_API_TOKEN` (required): Your Replicate API token for authentication
@@ -44,6 +48,12 @@ This MCP server provides image generation capabilities using the Replicate Flux 
 ### generate_image
 
 Generates images using the Flux model based on text prompts.
+
+![image](https://github.com/user-attachments/assets/766921ce-ca8e-4d68-866d-8c7b55b2e09d)
+
+![image](https://github.com/user-attachments/assets/612370d0-9c81-4853-b818-099724bfac75)
+
+![out-0 (1)](https://github.com/user-attachments/assets/83549b2e-525a-4ff9-825c-83ba74459575)
 
 #### Parameters
 
@@ -69,3 +79,8 @@ const result = await use_mcp_tool({
 ```
 
 The tool returns an array of URLs to the generated images.
+
+
+## 📜 License
+
+This project is licensed under the MIT License.
