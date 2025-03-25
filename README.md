@@ -3,10 +3,57 @@
 
 This MCP server provides image generation capabilities using the Replicate Flux model.
 
+## Installation
+
+### Option 1: NPX Method (No Local Setup Required)
+You can use the package directly from npm without installing it locally:
+
+```bash
+# No installation needed - npx will handle it
+```
+
+### Option 2: Local Installation
+If you prefer a local installation:
+
+```bash
+# Global installation
+npm install -g @gongrzhe/image-gen-server
+
+# Or local installation
+npm install @gongrzhe/image-gen-server
+```
+
 ## Setup
 
-1. On MacOS: ~/Library/Application Support/Claude/claude_desktop_config.json
-   On Windows: %APPDATA%/Claude/claude_desktop_config.json
+### Configure Claude Desktop
+
+Edit your Claude Desktop configuration file:
+
+- On MacOS: `~/Library/Application Support/Claude/claude_desktop_config.json`
+- On Windows: `%APPDATA%/Claude/claude_desktop_config.json`
+
+#### Option 1: NPX Configuration (Recommended)
+This method runs the server directly from npm without needing local files:
+
+```json
+{
+  "mcpServers": {
+    "image-gen": {
+      "command": "npx",
+      "args": ["@gongrzhe/image-gen-server"],
+      "env": {
+        "REPLICATE_API_TOKEN": "your-replicate-api-token",
+        "MODEL": "alternative-model-name"
+      },
+      "disabled": false,
+      "autoApprove": []
+    }
+  }
+}
+```
+
+#### Option 2: Local Installation Configuration
+If you installed the package locally:
 
 ```json
 {
@@ -25,11 +72,12 @@ This MCP server provides image generation capabilities using the Replicate Flux 
 }
 ```
 
-2. Get your Replicate API token:
-   - Sign up/login at https://replicate.com
-   - Go to https://replicate.com/account/api-tokens
-   - Create a new API token
-   - Copy the token and replace `your-replicate-api-token` in the MCP settings
+### Get Your Replicate API Token
+
+1. Sign up/login at https://replicate.com
+2. Go to https://replicate.com/account/api-tokens
+3. Create a new API token
+4. Copy the token and replace `your-replicate-api-token` in the MCP settings
 
 ![image](https://github.com/user-attachments/assets/583afa78-1a08-4eb5-9a37-decb95bd50c4)
 
@@ -77,7 +125,6 @@ const result = await use_mcp_tool({
 ```
 
 The tool returns an array of URLs to the generated images.
-
 
 ## 📜 License
 
