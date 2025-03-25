@@ -1,20 +1,35 @@
 {
-  "name": "image-gen-server",
+  "name": "@gongrzhe/image-gen-server",
   "version": "1.0.0",
   "type": "module",
   "main": "build/index.js",
   "scripts": {
     "build": "tsc",
-    "start": "node build/index.js"
+    "start": "node build/index.js",
+    "prepublishOnly": "npm run build"
   },
   "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "description": "",
+  "author": "GongRzhe",
+  "license": "MIT",
+  "description": "An MCP server for image generation using the Replicate Flux model",
   "dependencies": {
     "@modelcontextprotocol/sdk": "^1.5.0",
     "@types/node": "^22.13.5",
     "axios": "^1.7.9",
     "typescript": "^5.7.3"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/GongRzhe/image-gen-server.git"
+  },
+  "bugs": {
+    "url": "https://github.com/GongRzhe/image-gen-server/issues"
+  },
+  "homepage": "https://github.com/GongRzhe/image-gen-server#readme",
+  "bin": {
+    "image-gen-server": "build/index.js"
+  },
+  "files": [
+    "build/**/*"
+  ]
 }
