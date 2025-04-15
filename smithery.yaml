@@ -1,0 +1,31 @@
+# Smithery configuration file: https://smithery.ai/docs/config#smitheryyaml
+
+startCommand:
+  type: stdio
+  configSchema:
+    # JSON Schema defining the configuration options for the MCP.
+    type: object
+    required:
+      - replicateApiToken
+    properties:
+      replicateApiToken:
+        type: string
+        description: Replicate API token for authentication
+      model:
+        type: string
+        default: black-forest-labs/flux-schnell
+        description: Replicate model to use for image generation
+  commandFunction:
+    # A JS function that produces the CLI command based on the given config to start the MCP on stdio.
+    |-
+    (config) => ({
+      command: 'node',
+      args: ['build/index.js'],
+      env: {
+        REPLICATE_API_TOKEN: config.replicateApiToken,
+        MODEL: config.model
+      }
+    })
+  exampleConfig:
+    replicateApiToken: example-token-1234
+    model: alternative-model-name
