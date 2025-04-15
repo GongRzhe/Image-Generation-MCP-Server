@@ -1,9 +1,19 @@
 # Image Generation MCP Server
 ![](https://badge.mcpx.dev?type=server 'MCP Server')
 
+[![smithery badge](https://smithery.ai/badge/@GongRzhe/Image-Generation-MCP-Server)](https://smithery.ai/server/@GongRzhe/Image-Generation-MCP-Server)
+
 This MCP server provides image generation capabilities using the Replicate Flux model.
 
 ## Installation
+
+### Installing via Smithery
+
+To install Image Generation MCP Server for Claude Desktop automatically via [Smithery](https://smithery.ai/server/@GongRzhe/Image-Generation-MCP-Server):
+
+```bash
+npx -y @smithery/cli install @GongRzhe/Image-Generation-MCP-Server --client claude
+```
 
 ### Option 1: NPX Method (No Local Setup Required)
 You can use the package directly from npm without installing it locally:
