@@ -1,3 +1,5 @@
+[![MseeP.ai Security Assessment Badge](https://mseep.net/pr/gongrzhe-image-generation-mcp-server-badge.png)](https://mseep.ai/app/gongrzhe-image-generation-mcp-server)
+
 # Image Generation MCP Server
 ![](https://badge.mcpx.dev?type=server 'MCP Server')
 
